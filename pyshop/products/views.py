@@ -6,3 +6,7 @@ import requests
 
 def index(requests):
     return HttpResponse('Hello Brian')
+
+
+def new(requests):
+    return HttpResponse('New Products Brian')
