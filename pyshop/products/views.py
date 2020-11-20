@@ -5,12 +5,12 @@ from .models import Product
 # Create your views here.
 
 
-def index(requests):
+def index(request):
     products = Product.objects.all()
     # Product.objects.filter()
     # Product.objects.get()
     # Product.objects.save()
-    return HttpResponse('Hello Brian')
+    return render(request, "index.html", {"products": products})
 
 
 def new(requests):
